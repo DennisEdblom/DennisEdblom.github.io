@@ -1,0 +1,31 @@
+<header class="site-header">
+  <div class="wrapper">
+    <a class="site-title" href="{{ "" | prepend: site.baseurl | prepend: site.url }}/">
+      <img src="{{ "/assets/img/title3.png" | absolute_url }}" alt="{{ site.title }}" />
+    </a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon"></a>
+
+      <div class="menu">
+        {% for page in site.header.pages %}
+          <span class="wrap-link">
+
+            {% assign follow_icon_path = "/assets/img/icons/" | append: page.name | downcase | append: ".png" | absolute_url %}
+            <img
+              src="{{ follow_icon_path }}"
+              alt="{{ page.name | downcase }}"
+            />
+            <a href="{{ page.link }}">
+              {% if page.value and follow.value != "" and page.value != nil %}
+                {{ page.value }}
+              {% else %}
+                {{ page.name }}
+              {% endif %}
+            </a>
+          </span>
+        {% endfor %}
+      </div>
+    </nav>
+  </div>
+</header>

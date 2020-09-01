@@ -1,0 +1,53 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+title: Dennis Portfolio
+description: >- # this means to ignore newlines until "baseurl:"
+  Portfolio for Dennis Edblom.
+baseurl: "" # the subpath of the site
+url: "https://dennisedblom.github.io" # the base hostname & protocol for the site
+og_image: /assets/img/profile-pic.jpg
+google_analytics: ""
+
+header:
+  pages:
+    - name: LinkedIn
+      link: http://linkedin.com/in/dennis-edblom-874782139/
+    # - name: Home
+    #   slug: /
+    # - name: Work
+
+footer:
+  show_powered_by: false
+  contact:
+    - name: Email
+      value: dennis.edblom@gmail.com
+      link: mailto:dennis.edblom@gmail.com
+  follow:
+    - name: LinkedIn
+      link: http://linkedin.com/in/dennis-edblom-874782139/
+    - name: GitHub
+      link: http://github.com/DennisEdblom
+
+# Build settings
+markdown: kramdown
+sass:
+    style: :compressed
+plugins:
+  - jekyll-feed
+
+# Excluded items
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - feed.xml
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Used for defeating caching
+version: 1
